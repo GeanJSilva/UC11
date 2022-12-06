@@ -1,0 +1,32 @@
+package teste.gamemania;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestedeFuncionalidade {
+	
+	private WebDriver driver;
+	
+	@Before
+	public void ConfigurarTeste(){
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gean\\Documents\\SENAI 2022\\UC 11\\TestesGameMania\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+	}
+	
+	@Test
+	public void testeNavegabilidade(){
+		driver.get("https://geanjsilva.github.io/gamemaniaprojeto/index.html");
+		driver.findElement(By.id("fa fa-user-circle-o")).click();
+		
+	}
+	
+	
+	
+	
+
+}
